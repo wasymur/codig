@@ -23,6 +23,24 @@
   
       public function hello() { 
          var_dump($this->wasy->pai());
+         $this->load->database();
+         
+         $data = array( 
+            'id' => '1', 
+            'Name' => 'wasy' 
+         ); 
+
+        //$this->db->insert("stud", $data);
+
+        $data = array( 
+          'name' => 'wasy2222'
+); 
+
+      $this->db->set($data); 
+      $this->db->where("id", '1'); 
+      $this->db->update("stud", $data);
+
+         
          $this->load->view('tests/hello');
       } 
    } 
